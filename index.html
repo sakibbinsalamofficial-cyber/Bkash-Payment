@@ -1,72 +1,60 @@
 <!DOCTYPE html>
-<html lang="bn"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Modern Dashboard</title>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Dashboard</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head> <body>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
 <div class="container">
-<div class="logo">
-    <h1>My Payment</h1>
-</div>
-
-<div class="top-cards">
-
-    <div class="payment-card">
-        <div class="icon">
-            <i class="fa-solid fa-wallet"></i>
+    <div class="logo">
+        <h1>Bkash Payment</h1>
+    </div>
+    <div class="top-cards">
+        <div class="payment-card">
+            <div class="icon">
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div>
+                <h3>Payment</h3>
+                <p>Secure Transaction</p>
+            </div>
         </div>
-
-        <div>
-            <h3>Payment</h3>
-            <p>Secure Transaction</p>
+        <div class="amount-card">
+            ৳ 100
         </div>
     </div>
-
-    <div class="amount-card">
-        ৳ 100
+    <div class="main-card">
+        <h2>Transaction ID</h2>
+        <input
+        type="text"
+        id="trx"
+        placeholder="Enter Transaction ID">
+        <div class="instruction">
+            <p>• Complete your payment.</p>
+            <p>• Use the correct recipient number.</p>
+            <p>
+                • Recipient:
+                <span id="number">01410509247</span>
+                <button class="copy-btn"
+                onclick="copyNumber()">
+                    <i class="fa-regular fa-copy"></i>
+                    Copy
+                </button>
+            </p>
+            <p>• Amount: ৳100</p>
+            <p>• Enter the transaction ID after payment.</p>
+            <p>• Click VERIFY to continue.</p>
+        </div>
     </div>
-
+    <button class="verify-btn"
+    onclick="verifyTransaction()">
+        VERIFY
+    </button>
 </div>
-
-<div class="main-card">
-
-    <h2>Transaction ID</h2>
-
-    <input
-    type="text"
-    id="trx"
-    placeholder="Enter Transaction ID">
-
-    <div class="instruction">
-
-        <p>• Complete your payment.</p>
-
-        <p>• Use the correct recipient number.</p>
-
-        <p>
-            • Recipient:
-            <span id="number">01410509247</span>
-
-            <button class="copy-btn"
-            onclick="copyNumber()">
-                <i class="fa-regular fa-copy"></i>
-                Copy
-            </button>
-        </p>
-
-        <p>• Amount: ৳100</p>
-
-        <p>• Enter the transaction ID after payment.</p>
-
-        <p>• Click VERIFY to continue.</p>
-
-    </div>
-
-</div>
-
-<button class="verify-btn"
-onclick="verifyTransaction()">
-    VERIFY
-</button>
-</div>
-<script> function copyNumber() { navigator.clipboard.writeText("017XXXXXXXX"); alert("Number copied"); } function verifyTransaction() { const trx = document.getElementById("trx").value.trim(); if(trx === ""){ alert("Please enter Transaction ID"); return; } fetch( "https://docs.google.com/forms/d/e/1FAIpQLSe77V_mkMXw-PVY2CmF9Flnll_b9xy2v9LmFuJeqBdEpXLLig/formResponse", { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "entry.269725698=" + encodeURIComponent(trx) + "&entry.405714952=" + encodeURIComponent("Website") } ); alert("Verification Submitted"); document.getElementById("trx").value = ""; } </script>
-</body> </html>
+<script src="script.js"></script>
+</body>
+</html>
