@@ -3,32 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment Page</title>
+<title>Modern Dashboard</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
 
 <div class="container">
 
     <div class="logo">
-        <h2>Payment</h2>
+        <h1>My Payment</h1>
     </div>
 
-    <div class="amount-box">
-        ৳666
+    <div class="top-cards">
+
+        <div class="payment-card">
+            <div class="icon">
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+
+            <div>
+                <h3>Payment</h3>
+                <p>Secure Transaction</p>
+            </div>
+        </div>
+
+        <div class="amount-card">
+            ৳ 7737
+        </div>
+
     </div>
 
-    <div class="card">
-        <h3>ট্রানজেকশন আইডি দিন</h3>
+    <div class="main-card">
 
-        <input type="text" placeholder="ট্রানজেকশন আইডি দিন">
+        <h2>Transaction ID</h2>
 
-        <p>প্রাপক নম্বর: 01336951520</p>
+        <input
+        type="text"
+        id="trx"
+        placeholder="Enter Transaction ID">
 
-        <button onclick="copyNumber()">Copy Number</button>
+        <div class="instruction">
+
+            <p>• Complete your payment.</p>
+
+            <p>• Use the correct recipient number.</p>
+
+            <p>
+                • Recipient:
+                <span id="number">017XXXXXXXX</span>
+
+                <button class="copy-btn"
+                onclick="copyNumber()">
+                    <i class="fa-regular fa-copy"></i>
+                    Copy
+                </button>
+            </p>
+
+            <p>• Amount: ৳7737</p>
+
+            <p>• Enter the transaction ID after payment.</p>
+
+            <p>• Click VERIFY to continue.</p>
+
+        </div>
+
     </div>
 
-    <button class="verify-btn">
+    <button class="verify-btn"
+    onclick="verifyTransaction()">
         VERIFY
     </button>
 
