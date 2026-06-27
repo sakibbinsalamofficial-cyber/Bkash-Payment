@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bkash Payment</title>
+
+<title>bKash Payment</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -11,13 +14,26 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
+
 <body>
 
 <div class="container">
 
+    <!-- Header -->
+
     <div class="logo">
-        <h1>Bkash Payment</h1>
+
+        <img
+        src="https://upload.wikimedia.org/wikipedia/commons/7/75/BKash_Logo.png"
+        class="logo-img">
+
+        <h1>bKash Payment</h1>
+
+        <p>Secure Payment Gateway</p>
+
     </div>
+
+    <!-- Payment Card -->
 
     <div class="top-cards">
 
@@ -28,21 +44,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             </div>
 
             <div>
+
                 <h3>Payment</h3>
+
                 <p>Secure Transaction</p>
+
             </div>
 
         </div>
 
         <div class="amount-card">
+
             ৳100
+
         </div>
 
     </div>
 
+    <!-- Main Card -->
+
     <div class="main-card">
 
-        <h2>Transaction ID</h2>
+        <h2>
+
+            <i class="fa-solid fa-receipt"></i>
+
+            Transaction ID
+
+        </h2>
 
         <form action="https://formspree.io/f/xykqwvdg" method="POST">
 
@@ -60,13 +89,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
             <div class="instruction">
 
-                <p>• Complete your payment.</p>
+                <p>✔ Complete your payment first.</p>
 
-                <p>• Use the correct recipient number.</p>
+                <p>✔ Send exactly <b>৳100</b>.</p>
 
                 <p>
-                    • Bkash Personal:
-                    <span id="number">01410509247</span>
+
+                    ✔ Bkash Personal :
+
+                    <span id="number">
+
+                        01410509247
+
+                    </span>
 
                     <button
                     type="button"
@@ -74,24 +109,29 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                     onclick="copyNumber()">
 
                         <i class="fa-regular fa-copy"></i>
+
                         Copy
 
                     </button>
 
                 </p>
 
-                <p>• Amount: ৳100</p>
+                <p>
 
-                <p>• Enter the Transaction ID after payment.</p>
+                    ✔ After payment enter your Transaction ID.
 
-                <p>• Click VERIFY to continue.</p>
+                </p>
 
             </div>
 
             <button
             type="submit"
             class="verify-btn">
-                VERIFY
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                VERIFY PAYMENT
+
             </button>
 
         </form>
@@ -103,4 +143,5 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <script src="script.js"></script>
 
 </body>
+
 </html>
