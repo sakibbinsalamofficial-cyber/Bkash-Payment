@@ -8,7 +8,7 @@ navigator.clipboard.writeText(number)
         alert("Number copied successfully!");
     })
     .catch(() => {
-        alert("Copy failed!");
+        alert("Copy");
     });
 ```
 
