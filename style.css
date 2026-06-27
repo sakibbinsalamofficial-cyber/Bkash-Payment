@@ -6,7 +6,7 @@
 }
 
 body{
-    background:#f5f6fa;
+    background:linear-gradient(135deg,#fdf2f8,#ffe4ef);
     min-height:100vh;
     display:flex;
     justify-content:center;
@@ -20,13 +20,28 @@ body{
 }
 
 .logo{
+    background:#e2136e;
+    color:#fff;
     text-align:center;
+    padding:30px;
+    border-radius:20px;
     margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(226,19,110,.35);
+}
+
+.logo-img{
+    width:90px;
+    margin-bottom:15px;
 }
 
 .logo h1{
-    color:#d63384;
-    font-size:42px;
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.logo p{
+    font-size:16px;
+    opacity:.9;
 }
 
 .top-cards{
@@ -37,100 +52,137 @@ body{
 
 .payment-card{
     flex:1;
-    background:white;
-    border-radius:14px;
+    background:#fff;
+    border-radius:18px;
     padding:20px;
     display:flex;
     align-items:center;
     gap:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 .icon{
-    width:60px;
-    height:60px;
+    width:65px;
+    height:65px;
     border-radius:50%;
-    background:#f2f2f2;
+    background:#ffe4ef;
+    color:#e2136e;
     display:flex;
-    align-items:center;
     justify-content:center;
-    font-size:22px;
+    align-items:center;
+    font-size:26px;
+}
+
+.payment-card h3{
+    color:#222;
+}
+
+.payment-card p{
+    color:#666;
 }
 
 .amount-card{
     width:220px;
-    background:white;
-    border-radius:14px;
+    background:#fff;
+    border-radius:18px;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:34px;
+    font-size:36px;
     font-weight:bold;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    color:#e2136e;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 .main-card{
-    background:#d63384;
-    color:white;
-    border-radius:16px;
-    padding:25px;
+    background:#e2136e;
+    color:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(226,19,110,.35);
 }
 
 .main-card h2{
     text-align:center;
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
 .main-card input{
     width:100%;
-    padding:15px;
+    padding:16px;
     border:none;
-    border-radius:10px;
-    font-size:16px;
+    border-radius:12px;
     margin-bottom:20px;
+    font-size:16px;
+}
+
+.instruction{
+    background:rgba(255,255,255,.12);
+    border-radius:15px;
+    padding:15px;
 }
 
 .instruction p{
     padding:12px 0;
-    border-bottom:1px solid rgba(255,255,255,.25);
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.instruction p:last-child{
+    border:none;
 }
 
 .copy-btn{
+    background:#fff;
+    color:#e2136e;
     border:none;
-    background:white;
-    color:#d63384;
-    padding:6px 12px;
-    border-radius:8px;
+    padding:8px 15px;
+    border-radius:10px;
     margin-left:10px;
+    font-weight:bold;
     cursor:pointer;
+    transition:.3s;
+}
+
+.copy-btn:hover{
+    transform:scale(1.05);
 }
 
 .verify-btn{
     width:100%;
-    margin-top:20px;
+    margin-top:25px;
     border:none;
-    padding:16px;
-    border-radius:12px;
-    background:#d62828;
-    color:white;
+    background:#fff;
+    color:#e2136e;
+    padding:18px;
+    border-radius:14px;
     font-size:18px;
     font-weight:bold;
     cursor:pointer;
+    transition:.3s;
 }
 
 .verify-btn:hover{
-    opacity:.9;
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
 @media(max-width:700px){
 
-    .top-cards{
-        flex-direction:column;
-    }
+.top-cards{
+    flex-direction:column;
+}
 
-    .amount-card{
-        width:100%;
-        padding:25px;
-    }
+.amount-card{
+    width:100%;
+    height:90px;
+}
+
+.logo h1{
+    font-size:30px;
+}
+
+.logo-img{
+    width:70px;
+}
 
 }
