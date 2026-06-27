@@ -3,58 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern Dashboard</title>
+<title>Bkash Payment</title>
+
 <link rel="stylesheet" href="style.css">
+
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
+
 <div class="container">
+
     <div class="logo">
         <h1>Bkash Payment</h1>
     </div>
+
     <div class="top-cards">
+
         <div class="payment-card">
+
             <div class="icon">
                 <i class="fa-solid fa-wallet"></i>
             </div>
+
             <div>
                 <h3>Payment</h3>
                 <p>Secure Transaction</p>
             </div>
+
         </div>
+
         <div class="amount-card">
-            ৳ 100
+            ৳100
         </div>
+
     </div>
+
     <div class="main-card">
+
         <h2>Transaction ID</h2>
-        <input
-        type="text"
-        id="trx"
-        placeholder="Enter Transaction ID">
-        <div class="instruction">
-            <p>• Complete your payment.</p>
-            <p>• Use the correct recipient number.</p>
-            <p>
-                • Bkash Personal:
-                <span id="number">01410509247</span>
-                <button class="copy-btn"
-                onclick="copyNumber()">
-                    <i class="fa-regular fa-copy"></i>
-                    Copy
-                </button>
-            </p>
-            <p>• Amount: ৳100</p>
-            <p>• Enter the transaction ID after payment.</p>
-            <p>• Click VERIFY to continue.</p>
-        </div>
+
+        <form action="https://formspree.io/f/xykqwvdg" method="POST">
+
+            <input
+            type="text"
+            id="trx"
+            name="Transaction ID"
+            placeholder="Enter Transaction ID"
+            required>
+
+            <input
+            type="hidden"
+            name="Amount"
+            value="100">
+
+            <div class="instruction">
+
+                <p>• Complete your payment.</p>
+
+                <p>• Use the correct recipient number.</p>
+
+                <p>
+                    • Bkash Personal:
+                    <span id="number">01410509247</span>
+
+                    <button
+                    type="button"
+                    class="copy-btn"
+                    onclick="copyNumber()">
+
+                        <i class="fa-regular fa-copy"></i>
+                        Copy
+
+                    </button>
+
+                </p>
+
+                <p>• Amount: ৳100</p>
+
+                <p>• Enter the Transaction ID after payment.</p>
+
+                <p>• Click VERIFY to continue.</p>
+
+            </div>
+
+            <button
+            type="submit"
+            class="verify-btn">
+                VERIFY
+            </button>
+
+        </form>
+
     </div>
-    <button class="verify-btn"
-    onclick="verifyTransaction()">
-        VERIFY
-    </button>
+
 </div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
