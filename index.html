@@ -1,147 +1,66 @@
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>bKash Payment</title>
-
 <link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-
 <div class="container">
+<div class="logo">
+<img src="logo.svg" class="logo-img" alt="Payment Logo">
+<h1>bKash Payment</h1>
+<p>Secure Payment Gateway</p>
+</div>
 
-    <!-- Header -->
+<div class="top-cards">
+<div class="payment-card">
+<div class="icon"><i class="fa-solid fa-wallet"></i></div>
+<div>
+<h3>Payment</h3>
+<p>Secure Transaction</p>
+</div>
+</div>
+<div class="amount-card">৳100</div>
+</div>
 
-    <div class="logo">
+<div class="main-card">
+<h2><i class="fa-solid fa-receipt"></i> Transaction ID</h2>
 
-        <img
-        src="https://upload.wikimedia.org/wikipedia/commons/7/75/BKash_Logo.png"
-        class="logo-img">
+<form action="https://formspree.io/f/xykqwvdg" method="POST">
 
-        <h1>bKash Payment</h1>
+<input type="text" id="trx" name="Transaction ID" placeholder="Enter Transaction ID" required>
+<input type="hidden" name="Amount" value="100">
 
-        <p>Secure Payment Gateway</p>
+<div class="instruction">
+<p>✔ Complete your payment first.</p>
+<p>✔ Send exactly <b>৳100</b>.</p>
+<p>✔ bKash Personal:
+<span id="number">01410509247</span>
 
-    </div>
+<button type="button" class="copy-btn" onclick="copyNumber()">
+<i class="fa-regular fa-copy"></i> Copy
+</button>
 
-    <!-- Payment Card -->
+</p>
 
-    <div class="top-cards">
-
-        <div class="payment-card">
-
-            <div class="icon">
-                <i class="fa-solid fa-wallet"></i>
-            </div>
-
-            <div>
-
-                <h3>Payment</h3>
-
-                <p>Secure Transaction</p>
-
-            </div>
-
-        </div>
-
-        <div class="amount-card">
-
-            ৳100
-
-        </div>
-
-    </div>
-
-    <!-- Main Card -->
-
-    <div class="main-card">
-
-        <h2>
-
-            <i class="fa-solid fa-receipt"></i>
-
-            Transaction ID
-
-        </h2>
-
-        <form action="https://formspree.io/f/xykqwvdg" method="POST">
-
-            <input
-            type="text"
-            id="trx"
-            name="Transaction ID"
-            placeholder="Enter Transaction ID"
-            required>
-
-            <input
-            type="hidden"
-            name="Amount"
-            value="100">
-
-            <div class="instruction">
-
-                <p>✔ Complete your payment first.</p>
-
-                <p>✔ Send exactly <b>৳100</b>.</p>
-
-                <p>
-
-                    ✔ Bkash Personal :
-
-                    <span id="number">
-
-                        01410509247
-
-                    </span>
-
-                    <button
-                    type="button"
-                    class="copy-btn"
-                    onclick="copyNumber()">
-
-                        <i class="fa-regular fa-copy"></i>
-
-                        Copy
-
-                    </button>
-
-                </p>
-
-                <p>
-
-                    ✔ After payment enter your Transaction ID.
-
-                </p>
-
-            </div>
-
-            <button
-            type="submit"
-            class="verify-btn">
-
-                <i class="fa-solid fa-circle-check"></i>
-
-                VERIFY PAYMENT
-
-            </button>
-
-        </form>
-
-    </div>
+<p>✔ After payment enter your Transaction ID.</p>
+<p>✔ Click VERIFY PAYMENT.</p>
 
 </div>
 
+<button type="submit" class="verify-btn">
+<i class="fa-solid fa-circle-check"></i>
+VERIFY PAYMENT
+</button>
+
+</form>
+
+</div>
+</div>
+
 <script src="script.js"></script>
-
 </body>
-
 </html>
